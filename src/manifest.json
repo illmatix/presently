@@ -1,0 +1,15 @@
+{
+    "name": "Presently",
+    "version": "0.0.1",
+    "description": "Presently - A new tab replacement that is inspired by Currently, which doesn't seem to function as it used to.",
+    "manifest_version": 2,
+    "chrome_url_overrides": {
+        "newtab": "app/index.html"
+    },
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "default_locale": "en",
+    "options_page": "app/index.html",
+    "permissions": [
+        "geolocation"
+    ]
+}

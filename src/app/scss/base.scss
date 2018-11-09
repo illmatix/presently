@@ -1,0 +1,144 @@
+html {
+    min-height: 100%;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    background-repeat: repeat;
+    font-size: 62.5%;
+    font-family: serif;
+
+    body {
+        color: #D3CFE2;
+        font-size: 1.8rem;
+        line-height: 1.618;
+        max-width: 38em;
+        margin: auto;
+        padding: 13px;
+        background: #263643;
+        background: -moz-linear-gradient(top, #263643 0%, #00101d 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #263643), color-stop(100%, #00101d));
+        background: -webkit-linear-gradient(top, #263643 0%, #00101d 100%);
+        background: -o-linear-gradient(top, #263643 0%, #00101d 100%);
+        background: -ms-linear-gradient(top, #263643 0%, #00101d 100%);
+        background: linear-gradient(to bottom, #263643 0%, #00101d 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#263643', endColorstr='#00101d', GradientType=0);
+    }
+
+    @media (max-width: 684px) {
+        body {
+            font-size: 1.53rem;
+        }
+    }
+    @media (max-width: 382px) {
+        body {
+            font-size: 1.35rem;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.1;
+        font-family: 'Oxygen';
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+}
+
+#content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    transition: .5s;
+    text-align: center;
+    font-family: Oxygen;
+
+    .wrapper {
+        margin-bottom: 50px;
+
+        > * {
+            -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s; /* Fading effect takes 1 second */
+        }
+    }
+
+    h1 {
+        transition: .2s;
+        font-size: 5.5em
+    }
+
+    h4 {
+        transition: .2s;
+        font-size: 2.48em
+    }
+
+    .clock {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        > * {
+            display:inline-block;
+            padding: .5rem 0rem;
+        }
+    }
+
+    .weather {
+        display:inline-block;
+        margin: 2rem 0;
+        width:90vh;
+
+        &__presently,
+        &__forecast {
+            margin: .75rem;
+        }
+        &__forecast {
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                padding:1rem;
+                li {
+                    width: calc(100% / 3);
+                    text-align: center;
+                }
+            }
+
+            .forecast {
+                &__weekday {
+
+                }
+                &__templow {
+
+                }
+                &__temphigh {
+
+                }
+                &__text {
+
+                }
+            }
+        }
+    }
+}
+
+
+/** Register your custom effects  **/
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
